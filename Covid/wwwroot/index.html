@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud Covid-19</title>
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+    <h1>Datos REporte</h1>
+    <h3>Agregar</h3>
+    <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
+        <label for="fechaRegistro">
+            <span>Fecha Reporte Web</span>
+            <input type="date" id="fechaRegistro" name="fechaRegistro" required />
+        </label>
+        <label for="idCaso">
+            <span>Id Caso</span>
+            <input type="number" id="idCaso" name="idCaso" min="1" max="5" required />
+        </label>
+        <label for="fechaNotificacion">
+            <span>Fecha de Notificación</span>
+            <input type="date" id="fechaNotificacion" name="fechaNotificacion" required />
+        </label>
+        <label for="codDiviPolaDepto">
+            <span>Código Divipola Departamento</span>
+            <input type="number" id="codDiviPolaDepto" name="codDiviPolaDepto" min="1" max="5" required />
+        </label>
+        <label for="nombreDepto">
+            <span>Nombre Departamento</span>
+            <input type="text" id="nombreDepto" name="nombreDepto" required />
+        </label>
+        <label for="codDiviPolaMun">
+            <span>Código Divipola Municipio</span>
+            <input type="number" id="codDiviPolaMun" name="codDiviPolaMun" min="1" max="5" required />
+        </label>
+        <label for="nombreMun">
+            <span>Nombre Municipio</span>
+            <input type="text" id="nombreMun" name="nombreMun" required />
+        </label>
+        <label for="edad">
+            <span>Edad</span>
+            <input type="number" id="edad" name="edad" min="1" max="5" required />
+        </label>
+        <label for="unidadMedida">
+            <span>Unidad de Medida</span>
+            <input type="number" id="unidadMedida" name="unidadMedida" min="1" max="5" required />
+        </label>
+        <label for="sexo">
+            <span>Sexo</span>
+            <input type="text" id="sexo" name="sexo" required />
+        </label>
+        <label for="tipoContagio">
+            <span>Tipo de Contagio</span>
+            <input type="text" id="tipoContagio" name="tipoContagio" required />
+        </label>
+        <label for="ubicacionCaso">
+            <span>Ubicación del caso</span>
+            <input type="text" id="ubicacionCaso" name="ubicacionCaso" required />
+        </label>
+        <label for="estado">
+            <span>Estado</span>
+            <input type="text" id="estado" name="estado" required />
+        </label>
+        <label for="codigoPais">
+            <span>Código del país</span>
+            <input type="number" id="codigoPais" name="codigoPais" min="1" max="5" required />
+        </label>
+        <label for="nombrePais">
+            <span>Nombre del País</span>
+            <input type="text" id="nombrePais" name="nombrePais" required />
+        </label>
+        <label for="recuperado">
+            <span>Recuperado</span>
+            <input type="text" id="recuperado" name="recuperado" required />
+        </label>
+        <label for="iniSintomas">
+            <span>Fecha Inicio Síntomas</span>
+            <input type="date" id="iniSintomas" name="iniSintomas" required />
+        </label>
+        <label for="fechaMuerte">
+            <span>Fecha Muerte</span>
+            <input type="date" id="fechaMuerte" name="fechaMuerte" required />
+        </label>
+        <label for="fechaDiagnostico">
+            <span>Fecha Diagnóstico</span>
+            <input type="date" id="fechaDiagnostico" name="fechaDiagnostico" required />
+        </label>
+        <label for="fechaRecupera">
+            <span>Fecha Recuperación</span>
+            <input type="date" id="fechaRecupera" name="fechaRecupera" required />
+        </label>
+        <label for="tipoRecupera">
+            <span>Tipo Recuperación</span>
+            <input type="text" id="tipoRecupera" name="tipoRecupera" required />
+        </label>
+        <label for="pertEtnica">
+            <span>Pertenencia Étnica</span>
+            <input type="text" id="pertEtnica" name="pertEtnica" required />
+        </label>
+        <label for="nombreGrupoEtni">
+            <span>Nombre Grupo Étnico</span>
+            <input type="tel" id="nombreGrupoEtni" name="nombreGrupoEtni" required />
+        </label>
+        <input type="submit" value="Agregar">
+    </form>
+
+    <div id="editForm">
+        <h3>Editar</h3>
+        <form action="javascript:void(0);" onsubmit="updateItem()">
+            <label for="edit-fechaRegistro">
+                <span>Fecha Reporte Web</span>
+                <input type="date" id="edit-fechaRegistro" name="edit-fechaRegistro" required />
+            </label>
+            <label for="edit-idCaso">
+                <span>Id Caso</span>
+                <input type="number" id="edit-idCaso" name="edit-idCaso" min="1" max="5" required />
+            </label>
+            <label for="edit-fechaNotificacion">
+                <span>Fecha de Notificación</span>
+                <input type="date" id="edit-fechaNotificacion" name="edit-fechaNotificacion" required />
+            </label>
+            <label for="edit-codDiviPolaDepto">
+                <span>Código Divipola Departamento</span>
+                <input type="number" id="edit-codDiviPolaDepto" name="edit-codDiviPolaDepto" min="1" max="5" required />
+            </label>
+            <label for="edit-nombreDepto">
+                <span>Nombre Departamento</span>
+                <input type="text" id="edit-nombreDepto" name="edit-nombreDepto" required />
+            </label>
+            <label for="edit-codDiviPolaMun">
+                <span>Código Divipola Municipio</span>
+                <input type="number" id="edit-codDiviPolaMun" name="edit-codDiviPolaMun" min="1" max="5" required />
+            </label>
+            <label for="edit-nombreMun">
+                <span>Nombre Municipio</span>
+                <input type="text" id="edit-nombreMun" name="edit-nombreMun" required />
+            </label>
+            <label for="edit-edad">
+                <span>Edad</span>
+                <input type="number" id="edit-edad" name="edit-edad" min="1" max="5" required />
+            </label>
+            <label for="edit-unidadMedida">
+                <span>Unidad de Medida</span>
+                <input type="number" id="edit-unidadMedida" name="edit-unidadMedida" min="1" max="5" required />
+            </label>
+            <label for="edit-sexo">
+                <span>Sexo</span>
+                <input type="text" id="edit-sexo" name="edit-sexo" required />
+            </label>
+            <label for="edit-tipoContagio">
+                <span>Tipo de Contagio</span>
+                <input type="text" id="edit-tipoContagio" name="edit-tipoContagio" required />
+            </label>
+            <label for="edit-ubicacionCaso">
+                <span>Ubicación del caso</span>
+                <input type="text" id="edit-ubicacionCaso" name="edit-ubicacionCaso" required />
+            </label>
+            <label for="edit-estado">
+                <span>Estado</span>
+                <input type="text" id="edit-estado" name="edit-estado" required />
+            </label>
+            <label for="edit-codigoPais">
+                <span>Código del país</span>
+                <input type="number" id="edit-codigoPais" name="edit-codigoPais" min="1" max="5" required />
+            </label>
+            <label for="edit-nombrePais">
+                <span>Nombre del País</span>
+                <input type="text" id="edit-nombrePais" name="edit-nombrePais" required />
+            </label>
+            <label for="edit-recuperado">
+                <span>Recuperado</span>
+                <input type="text" id="edit-recuperado" name="edit-recuperado" required />
+            </label>
+            <label for="edit-iniSintomas">
+                <span>Fecha Inicio Síntomas</span>
+                <input type="date" id="edit-iniSintomas" name="edit-iniSintomas" required />
+            </label>
+            <label for="edit-fechaMuerte">
+                <span>Fecha Muerte</span>
+                <input type="date" id="edit-fechaMuerte" name="edit-fechaMuerte" required />
+            </label>
+            <label for="edit-fechaDiagnostico">
+                <span>Fecha Diagnóstico</span>
+                <input type="date" id="edit-fechaDiagnostico" name="edit-fechaDiagnostico" required />
+            </label>
+            <label for="edit-fechaRecupera">
+                <span>Fecha Recuperación</span>
+                <input type="date" id="edit-fechaRecupera" name="edit-fechaRecupera" required />
+            </label>
+            <label for="edit-tipoRecupera">
+                <span>Tipo Recuperación</span>
+                <input type="text" id="edit-tipoRecupera" name="edit-tipoRecupera" required />
+            </label>
+            <label for="edit-pertEtnica">
+                <span>Pertenencia Étnica</span>
+                <input type="text" id="edit-pertEtnica" name="edit-pertEtnica" required />
+            </label>
+            <label for="edit-nombreGrupoEtni">
+                <span>Nombre Grupo Étnico</span>
+                <input type="tel" id="edit-nombreGrupoEtni" name="edit-nombreGrupoEtni" required />
+            </label>
+            <!--<input type="hidden" id="edit-id">
+    <input type="checkbox" id="edit-isComplete">
+    <input type="text" id="edit-name">-->
+            <input type="submit" value="Save">
+            <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+        </form>
+    </div>
+
+    <p id="counter"></p>
+
+    <table>
+        <tr>
+            <th>Is Complete?</th>
+            <th>Name</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tbody id="todos"></tbody>
+    </table>
+
+    <script src="js/site.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        getItems();
+    </script>
+</body>
+</html>
