@@ -26,5 +26,5 @@ yarn-error.log*
 #API
 /.vs
 /Covid/bin/
- Covid/obj/
+/Covid/obj/
 Covid.sln
