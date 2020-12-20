@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,6 +8,7 @@ namespace Covid.Models
 {
     public class Report
     {
+        [Key]
         public string Id { get; set; }
         public DateTime FechaReporteWeb { get; set; }
         public long IdCaso { get; set; }

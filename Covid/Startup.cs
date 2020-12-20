@@ -12,6 +12,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Covid.Models;
+using Covid.Context;
 
 namespace Covid
 {
@@ -28,7 +29,7 @@ namespace Covid
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<CovidContext>(opt =>
-                opt.UseInMemoryDatabase("CovidList"));
+                opt.UseSqlServer(Configuration.GetConnectionString("CovidDB")));
             services.AddControllers();
         }
 

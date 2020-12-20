@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Covid.Models;
 using System.Diagnostics;
+using Covid.Context;
 
 namespace Covid.Controllers
 {
