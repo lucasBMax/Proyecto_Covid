@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lucas\\Desktop\\Universidad\\Proyectos Propios\\Covid\\Covid\\Covid.csproj": {}
+    "C:\\Users\\Lucas\\Desktop\\ProyectosPropios\\Proyecto_Covid\\Covid\\Covid.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lucas\\Desktop\\Universidad\\Proyectos Propios\\Covid\\Covid\\Covid.csproj": {
+    "C:\\Users\\Lucas\\Desktop\\ProyectosPropios\\Proyecto_Covid\\Covid\\Covid.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lucas\\Desktop\\Universidad\\Proyectos Propios\\Covid\\Covid\\Covid.csproj",
+        "projectUniqueName": "C:\\Users\\Lucas\\Desktop\\ProyectosPropios\\Proyecto_Covid\\Covid\\Covid.csproj",
         "projectName": "Covid",
-        "projectPath": "C:\\Users\\Lucas\\Desktop\\Universidad\\Proyectos Propios\\Covid\\Covid\\Covid.csproj",
+        "projectPath": "C:\\Users\\Lucas\\Desktop\\ProyectosPropios\\Proyecto_Covid\\Covid\\Covid.csproj",
         "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lucas\\Desktop\\Universidad\\Proyectos Propios\\Covid\\Covid\\obj\\",
+        "outputPath": "C:\\Users\\Lucas\\Desktop\\ProyectosPropios\\Proyecto_Covid\\Covid\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
